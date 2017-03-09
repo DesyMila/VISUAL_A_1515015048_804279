@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package postest1;
+package POSTTEST1;
 
 import javax.swing.JOptionPane;
 
@@ -261,15 +261,9 @@ public class Modul1 extends javax.swing.JFrame {
     }//GEN-LAST:event_cbagamaActionPerformed
 
     private void namaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_namaKeyPressed
-     if (evt.getKeyCode()==evt.VK_ENTER);{
-        if(nama.getText().length()==0){
-            JOptionPane.showMessageDialog(null,"Masuk tidak Boleh kosong","Konfirmasi",JOptionPane.INFORMATION_MESSAGE);
-            nama.requestFocus();
-            return;
-        }
-    simpan.requestFocus();        // TODO add your handling code here:
+           // TODO add your handling code here:
     }//GEN-LAST:event_namaKeyPressed
-    }
+    
     /**
      * @param args the command line arguments
      */

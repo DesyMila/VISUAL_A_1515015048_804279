@@ -82,7 +82,7 @@ catch(SQLException e){
             stt = con.createStatement();
             rss = stt.executeQuery(sql);
             while(rss.next()){//tampilkan data 
-                Object[] o = new Object[4];
+                Object[] o = new Object[4];//penambahan array untuk pengisian tabel
                 o[0] = rss.getString("id");
                 o[1] = rss.getString("judul");
                 o[2] = rss.getString("penulis");
@@ -121,7 +121,7 @@ private boolean UbahData(String id, String judul, String penulis, String harga){
             stt = con.createStatement();
             rss = stt.executeQuery(sql);
             while(rss.next()){
-                Object[] data = new Object[4];
+                Object[] data = new Object[4];//penambahan array yang akan ditambahkan ke tabel
                 data[0] = rss.getString("id");
                 data[1] = rss.getString("judul");
                 data[2] = rss.getString("penulis");

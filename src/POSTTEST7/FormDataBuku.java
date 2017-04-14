@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package POSTTEST6;
+package POSTTEST7;
 
+import POSTTEST6.*;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -27,7 +28,7 @@ private void InitTable(){ //inisiasi tabel
     model.addColumn("HARGA");
     jTable1.setModel(model);
 }
-private void TambahData(String judul,String penulis,String harga){
+private void TambahData(String judul,String penulis,String harga){//Method untuk menambahkan data
     try{//blok percobaan
         String sql =
                 "INSERT INTO buku VALUES(NULL,'"+judul+"','"+penulis+"',"+harga+")";//pengisian tabel pada databaase
@@ -52,7 +53,7 @@ private void TambahData(String judul,String penulis,String harga){
         System.out.println(e.getMessage());//jika terjadi kesalahan akan menampilkan pemberitahuan kesalahan yang terjadi
     }
 }
-private void InsertData(String judul,String penulis,String harga){
+private void ValidasiData(String judul,String penulis,String harga){
 try{
     String sql="select*from buku";
     stt=con.createStatement();
@@ -369,7 +370,7 @@ TampilData();// TODO add your handling code here:
     }//GEN-LAST:event_formComponentShown
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+System.exit(0);        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -378,7 +379,7 @@ String judul=txtJudul.getText();
 String penulis=comboPenulis.getSelectedItem().toString();
 String harga=txtHarga.getText();
 TambahData(judul,penulis,harga);// TODO add your handling code here:
-InsertData(judul,penulis,harga);
+ValidasiData(judul,penulis,harga);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnubahActionPerformed
@@ -448,6 +449,7 @@ PencarianData(comboSearchBy.getSelectedItem().toString(),txtCari.getText());
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FormDataBuku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
